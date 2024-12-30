@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hix GraphiX Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+        background-color: #8094bb; /* Light gray close to white */
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+        color: #333; /* Dark gray text for better contrast */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: #007bff; /* Subtle blue hover effect */
+    }
+
+    /* Updated Footer styles */
+    footer {
+        background-color: #e8e8e8; /* Even lighter gray */
+        color: #333; /* Dark gray text for readability */
+        padding: 15px;
+        text-align: center;
+    }
+
+    footer a {
+        color: #007bff; /* Blue for links */
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+        /* Contact section */
+        .contact {
+            padding: 50px 15px;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        .contact h1 {
+            color: #3b5998;
+            margin-bottom: 30px;
+        }
+
+        .contact form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info h3 {
+            color: #3b5998;
+            margin-bottom: 10px;
+        }
+
+        .contact-info p {
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3b5998;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        .dropdown-item {
+            color: #3b5998 !important;
+        }
+
+        .intro {
+            padding: 50px 15px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .intro img {
+            border-radius: 10px;
+            max-width: 240px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro h2, .intro h3 {
+            color: #3b5998;
+            font-weight: bold;
+        }
+
+        /* Section styles */
+        .projects, .services, .testimonials {
+            padding: 50px 15px;
+            background-color: #ffffff;
+        }
+
+        .projects h2, .services h2, .testimonials h2 {
+            color: #3b5998;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #3b5998;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .intro {
+                padding: 20px;
+            }
+
+            .intro img {
+                max-width: 100px;
+            }
+
+            .projects, .services, .testimonials {
+                padding: 20px;
+            }
+        }
+
+/* Simple fade-in effect for animated elements */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Profile image with 16:9 aspect ratio */
+.intro-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 13 / 16; /* 16:9 aspect ratio */
+    object-fit: cover;
+    border-radius: 8px; /* Optional: rounded corners for the image */
+}
+
+/* Card styling for a clean, modern design */
+.card {
+    background-color: #fff;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Text styling */
+.intro-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .intro-image {
+        margin-bottom: 20px; /* Space for smaller screens */
+    }
+}
+
+
+
+.intro img {
+            border-radius: 10px;
+            max-width: 400px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, filter 1.5s ease; /* Apply transition for smooth hover effect */
+        }
+
+        /* Hover effect for the image with multiple filters */
+        .intro img:hover {
+            transform: scale(1.1) rotate(5deg);  /* Slight scale and rotation */
+            filter: 
+                brightness(1.5) /* Increase brightness */
+                contrast(1.5) /* Increase contrast */
+                hue-rotate(45deg) /* Change color tones */
+                saturate(2) /* Increase saturation */
+                sepia(0.3) /* Add a slight sepia filter for warmth */
+                grayscale(0.2) /* Reduce grayscale for a more colorful look */
+        }
+
+        /* Basic styling for the text and intro section */
+        .intro {
+            padding: 50px 15px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        
+
+        .social-media-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007bff; /* Change to your preferred hover color */
+}
+
+
+/* Importing Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Apply to the whole navbar */
+.navbar {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style for nav links */
+.navbar-nav .nav-link {
+    font-size: 16px; /* Adjust size as needed */
+    font-weight: 500; /* Regular weight for text */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 1px; /* Add some letter spacing */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effects for nav links */
+.navbar-nav .nav-link:hover {
+    color: #cfcc00; /* Change to any color you like */
+    text-decoration: none; /* Remove underline */
+    font-weight: 700; /* Make text bold when hovered */
+}
+
+/* Style for dropdown items */
+.navbar-nav .dropdown-item {
+    font-size: 14px;
+    font-weight: 400;
+    color: #555; /* Lighter color for dropdown items */
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for dropdown items */
+.navbar-nav .dropdown-item:hover {
+    background-color: #f0f0f0;
+    color: #007bff; /* Change to your preferred hover color */
+}
+
+/* Adjust navbar on smaller screens */
+@media (max-width: 767px) {
+    .navbar-nav .nav-link {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+}
+
+
+    </style>
+</head>
+<body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <a href="index.html">
+                    <img src="img/logohix.png" width="200"/>
+                </a>                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="projects.html">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html">Testimonials</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Contact
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="contact.html">From</a></li>
+                                <li><a class="dropdown-item" href="mailto:hdarmomi@gmail.com">Email</a></li>
+                                <li><a class="dropdown-item" href="https://wa.me/212770637602">Whatsap</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+    
+<!-- Intro Section -->
+<section class="intro text-center py-5">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <!-- Profile Image (on the left) -->
+            <div class="col-md-6">
+                <img id="hoverImage" src="img/hicham.png" alt="Hicham Eddarhmoumi" class="img-fluid intro-image mb-4">
+            </div>
+
+            <!-- Text Content (on the right) -->
+            <div class="col-md-6">
+                <div class="card shadow-lg p-4 rounded fade-in">
+                    <h2 class="h2 font-weight-bold mb-2 fade-in">HICHAM EDDARHMOUMI</h2>
+                    <h3 class="h4 text-muted mb-3 fade-in">Graphic Designer</h3>
+
+                    <!-- Contact Info -->
+                    <p class="intro-text fade-in mb-4">
+                        <strong>Contact Information:</strong><br>
+                        <a href="mailto:hdarmomi@gmail.com">hdarmomi@gmail.com</a> | +212 7 70 63 76 02
+                    </p>
+
+                    <!-- Short Bio -->
+                    <p class="fade-in" style="text-align: left;">
+                        Welcome! I’m Hicham Eddarhmoumi, a passionate graphic designer with a proven track record of crafting visually stunning and impactful designs. My expertise spans across graphic design, branding, and video editing, where creativity meets precision to deliver compelling visuals that leave a lasting impression.
+                        <br><br>
+                        Whether you need innovative logo designs, captivating social media graphics, or professional video edits, I’m here to bring your ideas to life. Let’s work together to elevate your brand and turn your creative vision into reality.
+                    </p>
+
+                    <!-- Social Media Links -->
+                    <div class="social-media-icons">
+                        <a href="https://www.facebook.com/hicham.graphix/" target="_blank" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/hix.graphix/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/hicham-eddarhmoumi-6494bb178/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/hixgraphix" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/@Hix.GraphiX" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@hix.graphix" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>                      <!-- need to be change -->
+
+                        <a href="https://www.behance.net" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>                      <!-- need to be change -->
+                        <a href="https://www.dribbble.com" target="_blank" class="social-icon"><i class="fab fa-dribbble"></i></a>                    <!-- need to be change -->
+                        <a href="https://wa.me/212770637602" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a> <!-- WhatsApp -->
+                        <a href="mailto:hdarmomi@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a> <!-- Gmail -->
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+    <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="container">
+        <div class="row">
+            <!-- Service 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <img src="img/Logo Creation.jpeg" class="card-img-top" alt="Logo Creation">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: left;">Logo Creation</h5>
+                        <p class="card-text" style="text-align: left;">Designing unique and memorable logos to effectively represent your brand.</p>
+                        <a href="#" class="btn btn-primary" >Details...</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <img src="img/hixproject.png" class="card-img-top" alt="Brand Identity">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: left;">Hix GraphiX
+                        </h5>
+                        <p class="card-text"  style="text-align: left;">Creating a unified visual identity for Hix Graphix, including logos, color palettes, and typography.
+
+                        </p>
+                        <a href="project.html" class="btn btn-primary">Details...</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Service 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card text-center">
+                    <img src="img/uxproject.png" class="card-img-top" alt="UI/UX Design">
+                    <div class="card-body">
+                        <h5 class="card-title"  style="text-align: left;">UI/UX Design for Hix GraphiX</h5>
+                        <p class="card-text"  style="text-align: left;">Designing intuitive, user-centered interfaces that blend functionality with aesthetics to enhance user experience across websites and applications.
+                        </p>
+                        <a href="#" class="btn btn-primary">Details...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <div class="container">
+            <div class="row">
+                <!-- Service 1 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="img/Logo Creation.jpeg" class="card-img-top" alt="Logo Creation">
+                        <div class="card-body">
+                            <h5 class="card-title"  style="text-align: left;">Logo Creation</h5>
+                            <p class="card-text"  style="text-align: left;">Designing unique and memorable logos to effectively represent your brand.</p>
+                            <a href="#" class="btn btn-primary">Details...</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="img/Brand Identity.jpeg" class="card-img-top" alt="Brand Identity">
+                        <div class="card-body">
+                            <h5 class="card-title"  style="text-align: left;">Brand Identity</h5>
+                            <p class="card-text"  style="text-align: left;">Creating a cohesive visual language for your brand, including logos, color schemes, and typography.</p>
+                            <a href="#" class="btn btn-primary">Details...</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-md-4 mb-4">
+                    <div class="card text-center">
+                        <img src="img/UI UX Design.jpeg" class="card-img-top" alt="UI/UX Design">
+                        <div class="card-body">
+                            <h5 class="card-title"  style="text-align: left;">UI/UX Design</h5>
+                            <p class="card-text"  style="text-align: left;">Crafting user-friendly and visually appealing interfaces for websites and applications.</p>
+                            <a href="#" class="btn btn-primary">Details...</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials" style="background: #f9f9f9; padding: 50px 0; position: relative;">
+    <h2 style="
+        text-align: center; 
+        font-size: 2.5em; 
+        color: #2c3e50; 
+        margin-bottom: 30px; 
+        font-weight: bold;
+    ">Testimonials</h2>
+    <div class="container" style="
+        display: flex; 
+        justify-content: center; 
+        align-items: center;
+        position: relative;
+    ">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px;">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+                <!-- Testimonial 1 -->
+                <div class="carousel-item active">
+                    <div class="testimonial-card" style="
+                        background: #fff; 
+                        border-radius: 10px; 
+                        padding: 20px; 
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+                        text-align: center; 
+                        margin: 0 auto;
+                    ">
+                        <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Hicham Eddarhmoumi</h5>
+                        <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
+                        <p style="font-size: 1em; color: #7f8c8d;">The Hix Graphix project is live, and it’s a mix of late-night creativity, coffee-fueled ideas, and a sprinkle of perfectionism! 🎨✨ A bold brand identity that’s all about professionalism with a cool twist. 😎 Check it out, share your thoughts, and remember—if your brand needs a glow-up, I’m your go-to! 💡🙌
+
+                        </p>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card" style="
+                        background: #fff; 
+                        border-radius: 10px; 
+                        padding: 20px; 
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+                        text-align: center; 
+                        margin: 0 auto;
+                    ">
+                        <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Amine El Youssfi
+                        </h5>
+                        <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
+                        <p style="font-size: 1em; color: #7f8c8d;">I couldn’t be happier with the Hix Graphix work!, Your creativity and attention to detail brought my brand to life in ways I never imagined. Thank you for the incredible effort and for making the process so smooth. Highly recommended!
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card" style="
+                        background: #fff; 
+                        border-radius: 10px; 
+                        padding: 20px; 
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+                        text-align: center; 
+                        margin: 0 auto;
+                    ">
+                        <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Claire Dubois
+                                                    </h5>
+                        <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
+                        <p style="font-size: 1em; color: #7f8c8d;">Bravo, Hicham! The Hix Graphix project is a wonderful combination of elegance and professionalism. You have a rare ability to create designs that are both unique and impactful. Merci beaucoup for your dedication and for being such a talented designer.
+
+                        </p>
+                    </div>
+                </div>
+                            <!-- Testimonial 4 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-card" style="
+                                    background: #fff; 
+                                    border-radius: 10px; 
+                                    padding: 20px; 
+                                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+                                    text-align: center; 
+                                    margin: 0 auto;
+                                ">
+                                    <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">James Parker
+                                    </h5>
+                                    <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
+                                    <p style="font-size: 1em; color: #7f8c8d;">Fantastic work Hicham! Your creativity and vision transformed my ideas into a stunning brand identity. It was a pleasure working with someone so professional and passionate about their craft. Thank you for making the entire experience enjoyable and successful.
+
+                                    </p>
+                                </div>
+                            </div>
+
+
+                                            <!-- Testimonial 5 -->
+                <div class="carousel-item">
+                    <div class="testimonial-card" style="
+                        background: #fff; 
+                        border-radius: 10px; 
+                        padding: 20px; 
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+                        text-align: center; 
+                        margin: 0 auto;
+                    ">
+                        <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Sarah Johnson
+                        </h5>
+                        <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
+                        <p style="font-size: 1em; color: #7f8c8d;">I still call you hix hahah, i like it, hicham the designs not only met but exceeded my expectations, and I’m incredibly grateful for your hard work. Thank you for creating a logo for ,my project that truly reflects my vision.
+
+                        </p>
+                    </div>
+                </div>
+
+
+
+                                <!-- Testimonial 6 -->
+                                <div class="carousel-item">
+                                    <div class="testimonial-card" style="
+                                        background: #fff; 
+                                        border-radius: 10px; 
+                                        padding: 20px; 
+                                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+                                        text-align: center; 
+                                        margin: 0 auto;
+                                    ">
+                                        <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Amal Benmansour
+                                        </h5>
+                                        <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
+                                        <p style="font-size: 1em; color: #7f8c8d;">Hicham, your work on Hix Graphix is nothing short of amazing. The attention to detail and the passion you put into the project made a huge difference. Thank you for your professionalism and for delivering a design that perfectly represents my brand. I couldn’t be more satisfied
+
+                                        </p>
+                                    </div>
+                                </div>
+            
+            </div>
+        </div>
+
+        <!-- Scroll Buttons -->
+        <button class="btn btn-primary" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" style="
+            position: absolute; 
+            left: -50px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            border-radius: 50%; 
+            width: 50px; 
+            height: 50px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        ">
+            <span class="visually-hidden">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+
+        <button class="btn btn-primary" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" style="
+            position: absolute; 
+            right: -50px; 
+            top: 50%; 
+            transform: translateY(-50%); 
+            border-radius: 50%; 
+            width: 50px; 
+            height: 50px; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        ">
+            <span class="visually-hidden">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+    </div>
+</section>
+
+
+
+
+
+    <!-- Footer -->
+
+    
+    <footer class=" py-4" style=" background-color: #e8e8e8; color: #333;">
+        <div class="container">
+            <!-- Branding and Copyright -->
+            <div class="text-center mb-3" style="color: #333;">
+                <p class="mb-0">&copy; 2025 <strong>Hicham Eddarhmoumi</strong> | Hix GraphiX</p>
+            </div>
+    
+            <!-- Navigation Links -->
+            <div class="row text-center mb-3" >
+                <div class="col-md-6 offset-md-3">
+                    <ul class="list-inline">
+                        <li class="list-inline-item" >
+                            <a href="Project.html" class="text-decoration-none" style="color: #333;" >Projects</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="Services.html" class=" text-decoration-none" style="color: #333;">Services</a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="Testimonials.html" class=" text-decoration-none" style="color: #333;">Testimonials</a>
+                        </li>
+                        <li class="list-inline-item dropdown">
+                            <a href="#" class=" text-decoration-none dropdown-toggle" id="contactDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: #333;">Contact</a>
+                            <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+                                <li><a class="dropdown-item" href="https://wa.me/0770637602" target="_blank">WhatsApp</a></li>
+                                <li><a class="dropdown-item" href="mailto:hdarmomi@gmail.com">Email</a></li>
+                                <li><a class="dropdown-item" href="contact.html">Contact Form</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Attribution -->
+            <div class="text-center mt-3">
+                <p class="mb-0" style="font-size: 0.9rem;">Website designed and developed by <a href="#" class=" text-decoration-none" style="color: #3b5998;">Hicham Eddarhmoumi</a></p>
+            </div>
+            
+                    <!-- Social Media Links -->
+                    <div class="social-media-icons">
+                        <a href="https://www.facebook.com/hicham.graphix/" target="_blank" class="social-icon"> <i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/hix.graphix/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://x.com/hixgraphix" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/@Hix.GraphiX" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@hix.graphix" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>                      <!-- need to be change -->
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://www.behance.net" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>                      <!-- need to be change -->
+                        <a href="https://www.dribbble.com" target="_blank" class="social-icon"><i class="fab fa-dribbble"></i></a>                    <!-- need to be change -->
+                        &nbsp;&nbsp;&nbsp;
+                        <a href="https://wa.me/212770637602" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a> <!-- WhatsApp -->
+                        <a href="mailto:hdarmomi@gmail.com" class="social-icon"><i class="fas fa-envelope"></i></a> <!-- Gmail -->
+
+
+                    </div>
+        </div>
+    </footer>
+    
+
+    
+</body>
+
+<script>
+    // Add fade-in animation on page load
+    window.addEventListener('DOMContentLoaded', (event) => {
+        const elements = document.querySelectorAll('.fade-in');
+        elements.forEach((element, index) => {
+            setTimeout(() => {
+                element.classList.add('fade-in');
+            }, index * 300);  // Staggered animation (300ms delay between each)
+        });
+    });
+
+
+        // JavaScript to handle scroll functionality
+        const scrollContainer = document.getElementById('scrollContainer');
+        const scrollLeftButton = document.getElementById('scrollLeft');
+        const scrollRightButton = document.getElementById('scrollRight');
+
+        // Scroll left function
+        scrollLeftButton.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: -300,  // Scroll by 300px to the left
+                behavior: 'smooth'  // Smooth scrolling
+            });
+        });
+
+        // Scroll right function
+        scrollRightButton.addEventListener('click', () => {
+            scrollContainer.scrollBy({
+                left: 300,  // Scroll by 300px to the right
+                behavior: 'smooth'  // Smooth scrolling
+            });
+        });
+
+
+
+</script>
+
+
+
+</html>
