@@ -238,6 +238,169 @@ color: #007bff; /* Change to your preferred hover color */
     background-color: #f4f4f9;
     text-align: center;
     padding: 0rem 1rem; border-bottom: 3px solid #6A1B9C;}
+
+
+
+
+
+
+    modal {
+      display: none;  /* Hidden by default */
+      position: fixed;  /* Stay in place */
+      z-index: 1;  /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;  /* Full width */
+      height: 100%;  /* Full height */
+      overflow: auto;  /* Enable scroll if needed */
+      background-color: rgb(0,0,0);  /* Fallback color */
+      background-color: rgba(0,0,0,0.4);  /* Black with opacity */
+      padding-top: 60px;
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 5% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;  /* Could be more or less depending on screen size */
+    }
+
+    /* Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Service Card Styles */
+    .service {
+      text-align: center;
+      margin: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
+
+    .service img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .service h2 {
+      font-size: 1.5em;
+      margin-top: 10px;
+    }
+
+    .service p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    .details-btn {
+      padding: 10px 15px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .details-btn:hover {
+      background-color: #0056b3;
+    }
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background */
+    padding-top: 50px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #ffffff;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #333;
+}
+
+/* Modal Header */
+.modal-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 15px;
+}
+
+/* Modal Body */
+.modal-body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.modal-body ul {
+    margin-top: 10px;
+    color: #555;
+}
+
+.modal-body li {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+    
     </style>
 </head>
 <body>
@@ -295,72 +458,199 @@ color: #007bff; /* Change to your preferred hover color */
             </div>
         <br><br>        <div class="container">
             <div class="row">
-                <!-- Service 1 -->
+                <!-- Logo Creation Service  -->
                 <div class="col-md-4 mb-4">
                     <div class="card text-center">
                         <img src="img/Logo Creation.jpeg" class="card-img-top" alt="Logo Creation">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: left;">Logo Creation</h5>
                             <p class="card-text" style="text-align: left;">Designing unique and memorable logos to effectively represent your brand.</p>
-                            <a href="#" class="btn btn-primary" >Details...</a>
+                            <button class="details-btn" onclick="openModal('logoCreation')">Details</button>
                         </div>
                     </div>
+
+<!-- Modal for Logo Creation -->
+<div id="logoCreation" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('logoCreation')">&times;</span>
+      <h2>Logo Creation</h2>
+      <img src="img/Logo Creation.jpeg" class="card-img-top" alt="Logo Creation">
+
+      <p>A well-designed logo is essential for establishing a strong brand presence. We specialize in creating custom logos that are not only visually appealing but also reflect the essence of your brand. Whether you're starting a new business or rebranding, we craft logos that make a lasting impact.</p>
+      <ul>
+        <li>Custom logo design based on brand identity</li>
+        <li>Multiple design concepts to choose from</li>
+        <li>Logo refinement based on feedback</li>
+        <li>Color and typography integration</li>
+        <li>High-quality vector files for scalability</li>
+      </ul>
+      <p>Our logo creation process focuses on your business’s values, target audience, and industry trends to create a logo that is timeless and memorable. We ensure your logo works across various mediums, from digital platforms to print materials.</p>
+    </div>
+  </div>
+  
                 </div>
-                <!-- Service 2 -->
+                <!-- Brand Identity Service -->
                 <div class="col-md-4 mb-4">
                     <div class="card text-center">
                         <img src="img/Brand Identity.jpeg" class="card-img-top" alt="Brand Identity">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: left;">Brand Identity</h5>
                             <p class="card-text"  style="text-align: left;">Creating a cohesive visual language for your brand, including logos, color schemes, and typography.</p>
-                            <a href="#" class="btn btn-primary">Details...</a>
+                            <button class="details-btn" onclick="openModal('brandIdentity')">Details</button>
                         </div>
                     </div>
                 </div>
-                <!-- Service 3 -->
+
+
+<!-- Modal for Brand Identity -->
+<div id="brandIdentity" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('brandIdentity')">&times;</span>
+      <h2>Brand Identity</h2>
+      <img src="img/Brand Identity.jpeg" class="card-img-top" alt="Brand Identity">
+
+      <p>Creating a powerful brand identity is crucial for your business's success. We help define your brand’s voice, visual elements, and overall personality. Our process ensures that your brand communicates consistently across all platforms and resonates with your target audience.</p>
+      <ul>
+        <li>Logo design and customization</li>
+        <li>Color palette and typography selection</li>
+        <li>Brand guidelines creation</li>
+        <li>Brand positioning and messaging</li>
+        <li>Consistent visual elements for online and offline use</li>
+      </ul>
+      <p>Our team works closely with you to create a distinctive and memorable brand that sets you apart from competitors and builds long-lasting relationships with your audience.</p>
+    </div>
+  </div>
+  
+                <!--UI/UX Design Service -->
                 <div class="col-md-4 mb-4">
                     <div class="card text-center">
                         <img src="img/UI UX Design.jpeg" class="card-img-top" alt="UI/UX Design">
                         <div class="card-body">
                             <h5 class="card-title"  style="text-align: left;">UI/UX Design</h5>
                             <p class="card-text"  style="text-align: left;">Crafting user-friendly and visually appealing interfaces for websites and applications.</p>
-                            <a href="#" class="btn btn-primary">Details...</a>
+                            <button class="details-btn" onclick="openModal('uiUxDesign')">Details</button>
                         </div>
                     </div>
                 </div>
-                <!-- Service 4 -->
+
+<!-- Modal for UI/UX Design -->
+<div id="uiUxDesign" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('uiUxDesign')">&times;</span>
+      <h2>UI/UX Design</h2>
+      <img src="img/UI UX Design.jpeg" class="card-img-top" alt="UI/UX Design">
+
+      <p>Creating exceptional user interfaces and user experiences is key to ensuring your product is not only visually attractive but also easy to use and navigate. Our UI/UX design services focus on crafting intuitive, user-friendly designs that enhance engagement and drive conversions.</p>
+      <ul>
+        <li>User research and persona development</li>
+        <li>Wireframing and prototyping</li>
+        <li>Interactive design with seamless navigation</li>
+        <li>Responsive design for mobile and desktop</li>
+        <li>User testing and feedback integration</li>
+      </ul>
+      <p>We combine creativity and functionality to deliver designs that provide meaningful experiences. Our process involves a deep understanding of your target audience, analyzing behavior patterns, and iterating designs to ensure the final product meets the needs of both your users and your business goals.</p>
+    </div>
+  </div>
+  
+                <!--Web Development Service -->
                 <div class="col-md-4 mb-4">
                     <div class="card text-center">
                         <img src="img/Web Development.jpeg" class="card-img-top" alt="Web Development">
                         <div class="card-body">
                             <h5 class="card-title"  style="text-align: left;">Web Development</h5>
                             <p class="card-text"  style="text-align: left;">Building modern, responsive websites with optimized performance and usability.</p>
-                            <a href="#" class="btn btn-primary">Details...</a>
+                            <button class="details-btn" onclick="openModal('webDevelopment')">Details</button>
                         </div>
                     </div>
                 </div>
-                <!-- Service 5 -->
+
+<!-- Modal for Web Development -->
+<div id="webDevelopment" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('webDevelopment')">&times;</span>
+      <h2>Web Development</h2>
+      <img src="img/Web Development.jpeg" class="card-img-top" alt="Web Development">
+
+      <p>Our web development services are designed to create dynamic, interactive, and fully functional websites that provide a seamless user experience. Whether you need a custom website, e-commerce platform, or content management system (CMS), we use the latest technologies to build websites that meet your unique business needs.</p>
+      <ul>
+        <li>Custom web development and design</li>
+        <li>E-commerce website development</li>
+        <li>Content management systems (CMS) like WordPress</li>
+        <li>Responsive design for mobile and desktop</li>
+        <li>Backend development and database integration</li>
+        <li>Search engine optimization (SEO) optimization</li>
+      </ul>
+      <p>We focus on building websites that are not only visually appealing but also optimized for speed, performance, and security. Our team works closely with you to ensure the website reflects your brand identity while providing a smooth and engaging experience for your visitors. Whether you're starting a new project or looking to revamp an existing site, we ensure your website stands out in a competitive market.</p>
+    </div>
+  </div>
+  
+
+                <!--Video Editing Service -->
                 <div class="col-md-4 mb-4">
                     <div class="card text-center">
                         <img src="img/Video Editing.jpeg" class="card-img-top" alt="Video Editing">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: left;">Video Editing</h5>
                             <p class="card-text" style="text-align: left;">Professional video editing services to enhance your visual storytelling and branding.</p>
-                            <a href="#" class="btn btn-primary">Details...</a>
+                            <button class="details-btn" onclick="openModal('videoEditing')">Details</button>
                         </div>
                     </div>
                 </div>
-                <!-- Service 6 -->
+
+<!-- Modal for Video Editing -->
+<div id="videoEditing" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('videoEditing')">&times;</span>
+      <h2>Video Editing</h2>
+      <img src="img/Video Editing.jpeg" class="card-img-top" alt="Video Editing">
+
+      <p>We provide professional video editing services to enhance your content, creating visually stunning videos that capture attention and convey your message effectively. Whether you need a promotional video, YouTube content, social media clips, or cinematic projects, we transform your raw footage into polished, engaging material.</p>
+      <ul>
+        <li>Cutting and trimming footage</li>
+        <li>Color grading and correction</li>
+        <li>Motion graphics and visual effects (VFX)</li>
+        <li>Audio editing and sound design</li>
+        <li>Transitions and special effects</li>
+        <li>Subtitle and captioning integration</li>
+      </ul>
+      <p>Our video editing service also includes optimizing your video for different platforms and formats, ensuring that your content looks professional and consistent across social media, websites, and other mediums. Whether you’re an influencer, business, or content creator, we’ll help elevate your videos to captivate your audience and communicate your vision clearly and creatively.</p>
+    </div>
+  </div>
+  
+
+                <!-- Service Social Media Marketing-->
                 <div class="col-md-4 mb-4">
                     <div class="card text-center">
                         <img src="img/Social Media Marketing.jpeg" class="card-img-top" alt="Social Media Marketing">
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: left;">Social Media Marketing</h5>
                             <p class="card-text" style="text-align: left;">Developing strategies to improve engagement and reach across your social media channels.</p>
-                            <a href="#" class="btn btn-primary">Details...</a>
+                            <button class="details-btn" onclick="openModal('socialMediaMarketing')">Details</button>
                         </div>
                     </div>
                 </div>
+
+<!-- Modal for Social Media Marketing -->
+<div id="socialMediaMarketing" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('socialMediaMarketing')">&times;</span>
+      <h2>Social Media Marketing</h2>
+      <img src="img/Social Media Marketing.jpeg" class="card-img-top" alt="Social Media Marketing">
+
+      <p>We create and implement effective social media strategies to help you grow your online presence. Our approach focuses on engaging your audience, building brand awareness, and driving traffic to your website or business. We work with a variety of platforms including Facebook, Instagram, Twitter, LinkedIn, and TikTok to boost your brand's reach.</p>
+      <ul>
+        <li>Content creation and scheduling for consistent posts</li>
+        <li>Targeted ad campaigns to reach your ideal audience</li>
+        <li>Community management to build meaningful relationships</li>
+        <li>Analytics and performance tracking to measure success</li>
+        <li>Brand voice development for authentic communication</li>
+        <li>Influencer partnerships for extended brand reach</li>
+      </ul>
+      <p>Our social media marketing services are tailored to fit your business goals, whether you're aiming to increase brand awareness, drive sales, or engage with your audience on a deeper level. With our expertise, we ensure your brand stands out in the crowded social media landscape and grows organically over time.</p>
+    </div>
+  </div>
+  
+
             </div>
         </div>
     </section>
@@ -451,6 +741,25 @@ color: #007bff; /* Change to your preferred hover color */
                 observer.observe(card);
             });
         });
+
+
+    // Open Modal
+    function openModal(modalId) {
+      document.getElementById(modalId).style.display = "block";
+    }
+
+    // Close Modal
+    function closeModal(modalId) {
+      document.getElementById(modalId).style.display = "none";
+    }
+
+    // Close Modal if clicked outside
+    window.onclick = function(event) {
+      if (event.target.className == 'modal') {
+        event.target.style.display = "none";
+      }
+    }
+
     </script>
 </body>
 </html>
