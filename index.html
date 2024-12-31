@@ -25,6 +25,7 @@
     <meta name="twitter:image" content="https://hixgraphix.pro/img/hicham.png">
 
     <title>Hix GraphiX - Home</title>
+    <link rel="canonical" href="https://hixgraphix.pro/index.html" />
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
@@ -58,13 +59,6 @@
         color: #007bff; /* Subtle blue hover effect */
     }
 
-    /* Updated Footer styles */
-    footer {
-        background-color: #e8e8e8; /* Even lighter gray */
-        color: #333; /* Dark gray text for readability */
-        padding: 15px;
-        text-align: center;
-    }
 
     footer a {
         color: #007bff; /* Blue for links */
@@ -77,7 +71,7 @@
         /* Contact section */
         .contact {
             padding: 50px 15px;
-            background-color: #ffffff;
+            background-color: #f0f0f0f0f0f0;
             text-align: center;
         }
 
@@ -105,23 +99,7 @@
             font-size: 1.2em;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #3b5998;
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
 
-        footer a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
 
         .dropdown-item {
             color: #3b5998 !important;
@@ -147,7 +125,7 @@
         /* Section styles */
         .projects, .services, .testimonials {
             padding: 50px 15px;
-            background-color: #ffffff;
+            background-color: #f0f0f0f0f0f0;
         }
 
         .projects h2, .services h2, .testimonials h2 {
@@ -211,12 +189,6 @@
     border-radius: 8px; /* Optional: rounded corners for the image */
 }
 
-/* Card styling for a clean, modern design */
-.card {
-    background-color: #fff;
-    border: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
 
 /* Text styling */
 .intro-text {
@@ -234,30 +206,17 @@
 
 
 .intro img {
-            border-radius: 10px;
-            max-width: 400px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, filter 1.5s ease; /* Apply transition for smooth hover effect */
-        }
+    border-radius: 10px;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, filter 1.5s ease; /* Transition for smooth hover effect */
+}
 
-        /* Hover effect for the image with multiple filters */
-        .intro img:hover {
-            transform: scale(1.1) rotate(5deg);  /* Slight scale and rotation */
-            filter: 
-                brightness(1.5) /* Increase brightness */
-                contrast(1.5) /* Increase contrast */
-                hue-rotate(45deg) /* Change color tones */
-                saturate(2) /* Increase saturation */
-                sepia(0.3) /* Add a slight sepia filter for warmth */
-                grayscale(0.2) /* Reduce grayscale for a more colorful look */
-        }
+.intro img:hover {
+    transform: scale(1.1) rotate(1deg);  /* Slight scale and rotation */
+    filter: brightness(1.3)   saturate(2) sepia(0.3) grayscale(0.2);
+}
 
-        /* Basic styling for the text and intro section */
-        .intro {
-            padding: 50px 15px;
-            background-color: white;
-            text-align: center;
-        }
 
         .intro-text {
             font-size: 1.1rem;
@@ -273,7 +232,7 @@
 .social-icon {
     font-size: 24px;
     margin: 0 10px;
-    color: #333;
+    color: #6A1B9C;
     text-decoration: none;
 }
 
@@ -281,9 +240,6 @@
     color: #007bff; /* Change to your preferred hover color */
 }
 
-
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 /* Apply to the whole navbar */
 .navbar {
@@ -554,7 +510,7 @@
                 <!-- Testimonial 1 -->
                 <div class="carousel-item active">
                     <div class="testimonial-card" style="
-                        background: #fff; 
+                        background: #f0f0f0; 
                         border-radius: 10px; 
                         padding: 20px; 
                         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -563,7 +519,7 @@
                     ">
                         <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Hicham Eddarhmoumi</h5>
                         <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
-                        <p style="font-size: 1em; color: #7f8c8d;">The Hix Graphix project is live, and it’s a mix of late-night creativity, coffee-fueled ideas, and a sprinkle of perfectionism! 🎨✨ A bold brand identity that’s all about professionalism with a cool twist. 😎 Check it out, share your thoughts, and remember—if your brand needs a glow-up, I’m your go-to! 💡🙌
+                        <p style="font-size: 1em; color: #333333;">The Hix Graphix project is live, and it’s a mix of late-night creativity, coffee-fueled ideas, and a sprinkle of perfectionism! 🎨✨ A bold brand identity that’s all about professionalism with a cool twist. 😎 Check it out, share your thoughts, and remember—if your brand needs a glow-up, I’m your go-to! 💡🙌
 
                         </p>
                     </div>
@@ -571,7 +527,7 @@
                 <!-- Testimonial 2 -->
                 <div class="carousel-item">
                     <div class="testimonial-card" style="
-                        background: #fff; 
+                        background: #f0f0f0; 
                         border-radius: 10px; 
                         padding: 20px; 
                         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -581,7 +537,7 @@
                         <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Amine El Youssfi
                         </h5>
                         <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
-                        <p style="font-size: 1em; color: #7f8c8d;">I couldn’t be happier with the Hix Graphix work!, Your creativity and attention to detail brought my brand to life in ways I never imagined. Thank you for the incredible effort and for making the process so smooth. Highly recommended!
+                        <p style="font-size: 1em; color: #333333;">I couldn’t be happier with the Hix Graphix work!, Your creativity and attention to detail brought my brand to life in ways I never imagined. Thank you for the incredible effort and for making the process so smooth. Highly recommended!
 
                         </p>
                     </div>
@@ -590,7 +546,7 @@
                 <!-- Testimonial 3 -->
                 <div class="carousel-item">
                     <div class="testimonial-card" style="
-                        background: #fff; 
+                        background: #f0f0f0; 
                         border-radius: 10px; 
                         padding: 20px; 
                         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -600,7 +556,7 @@
                         <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Claire Dubois
                                                     </h5>
                         <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
-                        <p style="font-size: 1em; color: #7f8c8d;">Bravo, Hicham! The Hix Graphix project is a wonderful combination of elegance and professionalism. You have a rare ability to create designs that are both unique and impactful. Merci beaucoup for your dedication and for being such a talented designer.
+                        <p style="font-size: 1em; color: #333333;">Bravo, Hicham! The Hix Graphix project is a wonderful combination of elegance and professionalism. You have a rare ability to create designs that are both unique and impactful. Merci beaucoup for your dedication and for being such a talented designer.
 
                         </p>
                     </div>
@@ -608,7 +564,7 @@
                             <!-- Testimonial 4 -->
                             <div class="carousel-item">
                                 <div class="testimonial-card" style="
-                                    background: #fff; 
+                                    background: #f0f0f0; 
                                     border-radius: 10px; 
                                     padding: 20px; 
                                     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -618,7 +574,7 @@
                                     <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">James Parker
                                     </h5>
                                     <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
-                                    <p style="font-size: 1em; color: #7f8c8d;">Fantastic work Hicham! Your creativity and vision transformed my ideas into a stunning brand identity. It was a pleasure working with someone so professional and passionate about their craft. Thank you for making the entire experience enjoyable and successful.
+                                    <p style="font-size: 1em; color: #333333;">Fantastic work Hicham! Your creativity and vision transformed my ideas into a stunning brand identity. It was a pleasure working with someone so professional and passionate about their craft. Thank you for making the entire experience enjoyable and successful.
 
                                     </p>
                                 </div>
@@ -628,7 +584,7 @@
                                             <!-- Testimonial 5 -->
                 <div class="carousel-item">
                     <div class="testimonial-card" style="
-                        background: #fff; 
+                        background: #f0f0f0; 
                         border-radius: 10px; 
                         padding: 20px; 
                         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -638,7 +594,7 @@
                         <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Sarah Johnson
                         </h5>
                         <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
-                        <p style="font-size: 1em; color: #7f8c8d;">I still call you hix hahah, i like it, hicham the designs not only met but exceeded my expectations, and I’m incredibly grateful for your hard work. Thank you for creating a logo for ,my project that truly reflects my vision.
+                        <p style="font-size: 1em; color: #333333;">I still call you hix hahah, i like it, hicham the designs not only met but exceeded my expectations, and I’m incredibly grateful for your hard work. Thank you for creating a logo for ,my project that truly reflects my vision.
 
                         </p>
                     </div>
@@ -649,7 +605,7 @@
                                 <!-- Testimonial 6 -->
                                 <div class="carousel-item">
                                     <div class="testimonial-card" style="
-                                        background: #fff; 
+                                        background: #f0f0f0; 
                                         border-radius: 10px; 
                                         padding: 20px; 
                                         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
@@ -659,7 +615,7 @@
                                         <h5 style="font-size: 1.5em; color: #34495e; margin-bottom: 10px;">Amal Benmansour
                                         </h5>
                                         <p style="font-size: 1.2em; color: #f1c40f; margin-bottom: 15px;">★★★★★</p>
-                                        <p style="font-size: 1em; color: #7f8c8d;">Hicham, your work on Hix Graphix is nothing short of amazing. The attention to detail and the passion you put into the project made a huge difference. Thank you for your professionalism and for delivering a design that perfectly represents my brand. I couldn’t be more satisfied
+                                        <p style="font-size: 1em; color: #333333;">Hicham, your work on Hix Graphix is nothing short of amazing. The attention to detail and the passion you put into the project made a huge difference. Thank you for your professionalism and for delivering a design that perfectly represents my brand. I couldn’t be more satisfied
 
                                         </p>
                                     </div>
@@ -721,7 +677,7 @@
     
             <!-- Attribution -->
             <div class="text-center mt-3">
-                <p class="mb-0" style="font-size: 0.9rem;">Website designed and developed by <a href="#" class=" text-decoration-none" style="color: #3b5998;">Hicham Eddarhmoumi</a></p>
+                <p class="mb-0" style="font-size: 0.9rem;">Website designed and developed by <a href="index.html" class=" text-decoration-none" style="color: #3b5998;">Hicham Eddarhmoumi</a></p>
             </div>
             
                     <!-- Social Media Links -->
@@ -747,43 +703,6 @@
 
     
 </body>
-
-<script>
-    // Add fade-in animation on page load
-    window.addEventListener('DOMContentLoaded', (event) => {
-        const elements = document.querySelectorAll('.fade-in');
-        elements.forEach((element, index) => {
-            setTimeout(() => {
-                element.classList.add('fade-in');
-            }, index * 300);  // Staggered animation (300ms delay between each)
-        });
-    });
-
-
-        // JavaScript to handle scroll functionality
-        const scrollContainer = document.getElementById('scrollContainer');
-        const scrollLeftButton = document.getElementById('scrollLeft');
-        const scrollRightButton = document.getElementById('scrollRight');
-
-        // Scroll left function
-        scrollLeftButton.addEventListener('click', () => {
-            scrollContainer.scrollBy({
-                left: -300,  // Scroll by 300px to the left
-                behavior: 'smooth'  // Smooth scrolling
-            });
-        });
-
-        // Scroll right function
-        scrollRightButton.addEventListener('click', () => {
-            scrollContainer.scrollBy({
-                left: 300,  // Scroll by 300px to the right
-                behavior: 'smooth'  // Smooth scrolling
-            });
-        });
-
-
-
-</script>
 
 
 
